@@ -1,51 +1,29 @@
 # Validador-correlativas
 
-## 📘 Descripción
+## 📘 Contexto
 
-Este proyecto implementa un **Validador de Inscripciones** para materias con correlatividades, como suele suceder en planes de estudio de carreras universitarias o terciarias.
+Nos han solicitado el diseño y el desarrollo de un Validador de Inscripciones según materias correlativas.  
+En las carreras terciarias y universitarias, para ordenar el plan de estudios y asegurar que cuando se inicia una materia se tienen todos los conocimientos necesarios para entenderla, se establece lo que se llama comúnmente “materias correlativas”.  
 
-El objetivo es asegurar que un alumno pueda inscribirse únicamente si cumple con los requisitos académicos previos (correlativas) establecidos para cada materia.
-
----
-
-## 🧠 Contexto
-
-En carreras de nivel superior, algunas materias tienen como **correlativas** a otras que deben haber sido **aprobadas previamente**.  
-Por ejemplo:
-
-- **Algoritmos y Estructuras de Datos** → no tiene correlativas  
-- **Paradigmas de Programación** → requiere tener aprobada *Algoritmos*  
-- **Diseño de Sistemas** → requiere tener aprobada *Paradigmas*
-
-Una inscripción a múltiples materias será válida **solo si el alumno cumple todas las correlativas** para cada una de ellas.
+Básicamente, son materias que hay que tener aprobadas antes de cursar la materia en cuestión.  
+Por ejemplo, antes de cursar **Diseño de Sistemas** hay que cursar **Paradigmas de Programación**, y antes de ésta hay que cursar **Algoritmos y Estructuras de Datos**, donde esta última no tiene correlativas.
 
 ---
 
-## ✅ Consigna
+## 📌 Consigna
 
 Teniendo en cuenta que:
 
-- El método principal del presente módulo debe ser el método:
-  ```java
-  boolean Inscripcion.aprobada()
-  ```
+- El método principal del presente módulo debe ser el método `boolean aprobada()` de la clase **Inscripción**  
+- Las inscripciones pueden involucrar **varias asignaturas**  
+- La inscripción se **rechaza si al menos una materia no cumple** con la condición de correlatividades  
 
-- Las inscripciones pueden involucrar **varias asignaturas**.
+Y teniendo como restricción que solamente se podrán utilizar, además de la clase **Inscripción**, la clase **Materia** y **Alumno**, se pide:
 
-- La inscripción se **rechaza si al menos una materia** no cumple con la condición de correlatividades.
+1. Diseñar una solución en el **Paradigma Orientado a Objetos** y comunicar la solución mediante un **Diagrama de Clases**.  
+2. Codificar la solución en **Java**.  
+3. Crear los **tests unitarios** que considere necesario para mostrar el correcto funcionamiento del módulo.
 
-Y teniendo como **restricción** que solamente se podrán utilizar, además de la clase `Inscripcion`, la clase `Materia` y `Alumno`, se pide:
-
-### 1. 🧩 Diseñar una solución en el Paradigma Orientado a Objetos
-Se incluye un **diagrama UML** en este documento para representar las relaciones entre las clases y los métodos principales.
-
-### 2. 💻 Codificar la solución en Java
-El proyecto está implementado en Java 17 y sigue buenas prácticas de programación orientada a objetos.
-
-### 3. 🧪 Crear los tests unitarios necesarios
-Se incluyen pruebas con JUnit que permiten verificar el correcto funcionamiento del módulo.
-
----
 
 ## 🧱 Diagrama de Clases (UML)
 
