@@ -27,38 +27,4 @@ Y teniendo como restricción que solamente se podrán utilizar, además de la cl
 
 ## 🧱 Diagrama de Clases (UML)
 
-```plantuml
-@startuml
-
-class Materia {
-  - String nombre
-  - Integer ID
-  - List<Materia> correlativas
-  + void addCorrelativa(Materia... materias)
-  + List<Materia> getCorrelativas()
-}
-
-class Alumno {
-  - String nombre
-  - String apellido
-  - String legajo
-  - List<Materia> materiasAprobadas
-  + void aprobarMateria(Materia... materias)
-  + boolean aprobo(Materia materia)
-  + boolean cumpleCorrelativasPara(Materia materia)
-}
-
-class Inscripcion {
-  - Alumno alumno
-  - List<Materia> materias
-  + void addMateria(Materia... materias)
-  + boolean aprobada()
-}
-
-Materia "1" --> "*" Materia : correlativas
-Alumno "1" --> "*" Materia : materias aprobadas
-Inscripcion "1" --> "1" Alumno
-Inscripcion "1" --> "*" Materia
-
-@enduml
-```
+![Diagrama de Clases UML](docs/diagrama_de_clases.png)
