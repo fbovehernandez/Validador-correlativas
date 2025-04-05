@@ -27,4 +27,5 @@ Y teniendo como restricción que solamente se podrán utilizar, además de la cl
 
 ## 🧱 Diagrama de Clases (UML)
 
-![Diagrama de Clases UML](docs/diagrama_de_clases.png)
+![Diagrama de Clases UML](diagrama_de_clases.png)
+
