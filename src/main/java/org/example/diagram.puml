@@ -1,0 +1,40 @@
+@startuml
+' Diagrama de clases para Inscripcion, Alumno y Materia
+
+package "org.example" {
+
+    class Inscripcion {
+        - List<Materia> materias
+        - Alumno alumno
+        + Inscripcion(Alumno alumno)
+        + addMateria(Materia ...materias)
+        + aprobada(): boolean
+    }
+
+    class Alumno {
+        - String nombre
+        - String apellido
+        - String legajo
+        - List<Materia> materiasAprobadas
+        + Alumno(String nombre, String apellido, String legajo)
+        + aprobarMateria(Materia ...materias)
+        + cumpleCorrelativasPara(Materia materia): boolean
+    }
+
+    class Materia {
+        - String nombre_materia
+        - Integer ID_materia
+        - List<Materia> Correlativas
+        + Materia(String nombre_materia, Integer Id_materia)
+        + addCorrelativa(Materia ...correlativas)
+        + getCorrelativas(): List<Materia>
+    }
+
+    ' Relaciones
+    Inscripcion --> Alumno
+    Inscripcion --> Materia : *
+    Alumno --> Materia : *
+    Materia --> Materia
+}
+
+@enduml
