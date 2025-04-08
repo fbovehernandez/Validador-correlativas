@@ -34,6 +34,7 @@ public class InscripcionTest {
         Materia paradigmas = new Materia("Algoritmos", 1);
         Materia disenio = new Materia("Disenio", 2);
 
+        // Test add todo de una, me colgue con el metodo
         disenio.addCorrelativa(paradigmas);
         disenio.addCorrelativa(analisis_de_sistemas);
 
